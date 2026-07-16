@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caçadores Winchesters - Portal Oficial</title>
+  </head>
+  <body style="margin: 0; background-color: #09090b;">
+    <div id="root">
+      <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; color:#f59e0b; font-family:sans-serif; text-align:center; padding:2rem; background-color: #09090b;">
+        <h2 style="font-size:1.5rem; margin-bottom:1rem;">O Portal dos Caçadores está carregando...</h2>
+        <p style="color: #a1a1aa; font-size: 0.875rem;">Se a tela permanecer branca por muito tempo, tente limpar o cache do seu navegador ou recarregar a página.</p>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('error', function(e) {
+        var root = document.getElementById('root');
+        // Verifica se houve erro e se o React não conseguiu renderizar
+        if (root) {
+          // Se o root contiver apenas o carregador inicial (ou se houver um erro crítico inicial)
+          var textPresent = root.innerHTML.indexOf('O Portal dos Caçadores está carregando') !== -1;
+          if (textPresent || root.children.length === 0) {
+            root.innerHTML = '<div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; color:#fff; font-family:sans-serif; text-align:center; padding:2rem; background:#09090b;">' +
+              '<h2 style="color:#f59e0b; margin-bottom:1rem;">Ops! Ocorreu um erro ao carregar o Portal.</h2>' +
+              '<p style="color: #a1a1aa; font-size: 0.9rem; max-width: 500px; margin: 0 auto 1.5rem auto; line-height: 1.5;">O navegador pode não suportar alguns recursos modernos ou o cache está desatualizado. Tente abrir em outro navegador, atualizar o iOS/sistema ou recarregar a página.</p>' +
+              '<button onclick="window.location.reload(true)" style="background:#f59e0b; color:#09090b; border:none; padding:0.75rem 1.5rem; border-radius:0.5rem; font-weight:bold; cursor:pointer; font-size:0.9rem;">Recarregar Página</button>' +
+              '</div>';
+          }
+        }
+      });
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
