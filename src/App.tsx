@@ -11,9 +11,17 @@ import GincanaPuzzle from './components/GincanaPuzzle';
 import WatchSeries from './components/WatchSeries';
 import Leaderboard from './components/Leaderboard';
 import Comunicados from './components/Comunicados';
+import ChrisRecommends from './components/ChrisRecommends';
+import MaintenanceMode from './components/MaintenanceMode';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'comunicados' | 'cineclube' | 'gincana' | 'assistir' | 'leaderboard'>('comunicados');
+  const [activeTab, setActiveTab] = useState<'comunicados' | 'cineclube' | 'gincana' | 'assistir' | 'leaderboard' | 'chris'>('comunicados');
+
+  const IS_MAINTENANCE = false;
+
+  if (IS_MAINTENANCE) {
+    return <MaintenanceMode />;
+  }
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans flex flex-col selection:bg-amber-500/30 selection:text-amber-200">
@@ -84,6 +92,19 @@ export default function App() {
             </button>
 
             <button
+              onClick={() => setActiveTab('chris')}
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wide uppercase transition duration-200 cursor-pointer ${
+                activeTab === 'chris'
+                  ? 'bg-amber-500 text-zinc-950 shadow-md shadow-amber-500/10'
+                  : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900'
+              }`}
+              id="tab-chris"
+            >
+              <Sparkles className="w-4 h-4 shrink-0" />
+              <span>Chris Recomenda</span>
+            </button>
+
+            <button
               onClick={() => setActiveTab('leaderboard')}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wide uppercase transition duration-200 cursor-pointer ${
                 activeTab === 'leaderboard'
@@ -122,6 +143,10 @@ export default function App() {
 
           {activeTab === 'assistir' && (
             <WatchSeries />
+          )}
+
+          {activeTab === 'chris' && (
+            <ChrisRecommends />
           )}
 
           {activeTab === 'leaderboard' && (

@@ -1,6 +1,6 @@
 {
   "name": "Caçadores Winchesters",
-  "description": "Portal oficial da comunidade de fãs de Supernatural. Cineclube da semana, gincana do quebra-cabeça de Analu, quiz de conhecimento interativo e sistema de pontuação gamificada.",
+  "description": "Portal oficial da comunidade de fãs de Supernatural. Cineclube, gincana do quebra-cabeça, quiz interativo, episódios completos de Supernatural e as recomendações exclusivas de séries de terror do Chris.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

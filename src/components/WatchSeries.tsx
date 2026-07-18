@@ -14,16 +14,6 @@ interface SeasonLink {
   synopsis: string;
 }
 
-interface SeriesLibraryItem {
-  title: string;
-  seasonsCount: number;
-  genre?: string;
-  premiereYear?: number;
-  synopsis?: string;
-  posterUrl: string;
-  links: { label: string; url: string }[];
-}
-
 const SEASONS_DATA: SeasonLink[] = [
   {
     number: 1,
@@ -117,66 +107,10 @@ const SEASONS_DATA: SeasonLink[] = [
   }
 ];
 
-
-const SERIES_LIBRARY: SeriesLibraryItem[] = [
-  {
-    title: 'O Conto da Aia',
-    seasonsCount: 5,
-    genre: 'Drama',
-    premiereYear: 2017,
-    synopsis: 'Depois que um atentado terrorista tira a vida do presidente dos Estados Unidos e de grande parte dos outros políticos eleitos, uma facção assume o poder e estabelece um regime autoritário conhecido como Gilead.',
-    posterUrl: 'https://static.tvmaze.com/uploads/images/original_untouched/562/1406667.jpg',
-    links: [
-      { label: 'Drive Dublado', url: 'https://drive.google.com/drive/folders/1_scMY_gg0lnH89CznyVFrq_eUmQSmVcO' }
-    ]
-  },
-  {
-    title: 'Sandman',
-    seasonsCount: 2,
-    synopsis: 'Após anos aprisionado, Morfeu, o Rei dos Sonhos, embarca em uma jornada entre mundos para recuperar o que lhe foi roubado e restaurar seu poder.',
-    posterUrl: 'https://static.tvmaze.com/uploads/images/original_untouched/423/1059631.jpg',
-    links: [
-      { label: 'Drive', url: 'https://drive.google.com/drive/folders/1XsiXMTy59xFUMLroCXrQCXocPzZ4sJ3i' }
-    ]
-  },
-  {
-    title: 'The Boys',
-    seasonsCount: 5,
-    posterUrl: 'https://static.tvmaze.com/uploads/images/original_untouched/619/1547768.jpg',
-    links: [
-      { label: '1ª Temporada (2019)', url: 'https://drive.google.com/drive/folders/10srwgb-q2GnIHTAm4nzt6hw5G-lJvsTm' },
-      { label: '2ª Temporada (2020)', url: 'https://drive.google.com/drive/folders/10zC5lwD-GX6aB8CfrHLMRz25JLw4lkZX' },
-      { label: '3ª Temporada (2022)', url: 'https://drive.google.com/drive/folders/1-3hru5GZYwWmuOX6Hj1o4j_ZZsx2baYX' },
-      { label: '4ª Temporada (2024)', url: 'https://drive.google.com/drive/folders/11Bm6aM5GJERqq_ucV8yeRuk4WTuHtYdy' },
-      { label: '5ª Temporada (2026)', url: 'https://drive.google.com/drive/folders/1J8MrqEOPDP3rpgIYkG4fhdYOB-eMwa4A' }
-    ]
-  },
-  {
-    title: 'Gangues de Londres',
-    seasonsCount: 2,
-    posterUrl: 'https://static.tvmaze.com/uploads/images/original_untouched/558/1395281.jpg',
-    links: [
-      { label: 'Season 1', url: 'https://drive.google.com/drive/folders/1xdoPzbxu_CCbMNV4Gg9V10irCh1j88Lh' },
-      { label: 'Season 2', url: 'https://drive.google.com/drive/folders/1B5ei27SrTAEz89mjEChCcVhoWPIb6yxN' }
-    ]
-  }
-];
-
-const POSTER_UPDATE_NOTICE = [
-  'Constantine',
-  'Millennium',
-  'Se Desejos Matassem',
-  '50 States of Fright',
-  'Into the Dark',
-  'Helix',
-  'Penny Dreadful'
-];
-
 export default function WatchSeries() {
   const [viewingSynopsisId, setViewingSynopsisId] = useState<number | null>(null);
 
   return (
-    <>
     <section className="bg-zinc-950 border border-zinc-900 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden" id="watch-supernatural">
       {/* Background radial decorations */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -331,97 +265,5 @@ export default function WatchSeries() {
       </div>
 
     </section>
-
-    <section className="bg-zinc-950 border border-zinc-900 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden" id="biblioteca-series">
-      <div className="absolute top-0 left-0 w-72 h-72 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-zinc-900">
-        <div>
-          <div className="flex items-center gap-2 text-amber-500 font-bold uppercase tracking-wider text-sm mb-1.5">
-            <Film className="w-4 h-4" />
-            <span>Biblioteca de Séries</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-100 font-sans tracking-tight">
-            Séries Atualizadas
-          </h2>
-          <p className="text-zinc-400 text-sm mt-1 max-w-3xl">
-            Pôsteres corrigidos com links públicos individuais para incorporação no site, mantendo as informações e pastas do Google Drive informadas.
-          </p>
-        </div>
-
-        <span className="self-start md:self-center px-3 py-1 bg-amber-500/10 text-amber-400 text-xs uppercase font-mono font-bold tracking-wider rounded-lg border border-amber-500/20">
-          {SERIES_LIBRARY.length} Séries Revisadas
-        </span>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
-        {SERIES_LIBRARY.map((series) => (
-          <article
-            key={series.title}
-            className="bg-zinc-900/30 border border-zinc-800 hover:border-amber-500/40 rounded-xl p-4 transition-all duration-200 flex flex-col gap-4"
-          >
-            <div className="w-full aspect-[2/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-950">
-              <img
-                src={series.posterUrl}
-                alt={`Pôster oficial de ${series.title}`}
-                className="w-full h-full object-cover hover:scale-102 transition duration-300"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-
-            <div className="space-y-3 flex-grow">
-              <div>
-                <h3 className="text-base font-bold text-zinc-100">{series.title}</h3>
-                <p className="text-[10px] text-zinc-500 mt-1 font-mono uppercase tracking-wide">
-                  {series.seasonsCount} {series.seasonsCount === 1 ? 'Temporada' : 'Temporadas'}
-                  {series.genre ? ` • ${series.genre}` : ''}
-                  {series.premiereYear ? ` • ${series.premiereYear}` : ''}
-                </p>
-              </div>
-
-              {series.synopsis && (
-                <p className="text-xs text-zinc-400 leading-relaxed">{series.synopsis}</p>
-              )}
-            </div>
-
-            <div className="space-y-2">
-              {series.links.map((link) => (
-                <a
-                  key={link.url}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  referrerPolicy="no-referrer"
-                  className="flex items-center justify-center gap-1.5 w-full py-2 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold rounded-lg text-xs tracking-wide transition cursor-pointer"
-                >
-                  <Play className="w-3 h-3 fill-current" />
-                  <span>{link.label}</span>
-                </a>
-              ))}
-            </div>
-          </article>
-        ))}
-      </div>
-
-      <div className="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-5 flex flex-col lg:flex-row gap-4 justify-between">
-        <div className="flex gap-3">
-          <AlertCircle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-200">📢 Comunicado</h3>
-            <p className="text-xs text-zinc-400 mt-1 leading-relaxed">
-              Os pôsteres oficiais das séries abaixo serão atualizados em breve. Todas as demais informações permanecerão inalteradas no site.
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-wrap gap-2 lg:max-w-2xl">
-          {POSTER_UPDATE_NOTICE.map((title) => (
-            <span key={title} className="px-2.5 py-1 bg-zinc-950 border border-zinc-800 text-zinc-400 text-[10px] font-mono rounded-full">
-              {title}
-            </span>
-          ))}
-        </div>
-      </div>
-    </section>
-    </>
   );
 }
