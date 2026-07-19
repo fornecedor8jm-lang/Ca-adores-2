@@ -123,7 +123,7 @@ export default function MaintenanceMode() {
               <div className="space-y-1">
                 <p className="text-xs text-zinc-300 font-semibold uppercase font-mono tracking-wide">Previsão de Retorno:</p>
                 <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-                  O portal está sob rituais de proteção para implementação dos arquivos secretos do Chris (Especial de Séries de Terror) e estabilização do servidor. 
+                  O portal está sob rituais de proteção para implementação dos arquivos secretos da Chris (Especial de Séries de Terror) e estabilização do servidor. 
                 </p>
                 <p className="text-xs sm:text-sm text-amber-400 font-bold leading-relaxed mt-2">
                   Pode ser restaurado até as <span className="underline">23:59 do dia 18 de julho de 2026</span> ou antes!

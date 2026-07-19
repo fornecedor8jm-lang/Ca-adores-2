@@ -25,6 +25,7 @@ interface RecommendedShow {
   rating: string;
   creator?: string;
   category: 'terror' | 'action' | 'dorama' | 'classicos' | 'comedy';
+  curiosities?: string[];
 }
 
 const CHRIS_SHOWS: RecommendedShow[] = [
@@ -44,7 +45,12 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 5 (Drive)', url: 'https://drive.google.com/drive/folders/1J8MrqEOPDP3rpgIYkG4fhdYOB-eMwa4A' }
     ],
     rating: '8.7/10 (IMDb)',
-    category: 'action'
+    category: 'action',
+    curiosities: [
+      "O parceiro canino de Billy Bruto, 'Terror', é recorrente nas HQs, mas na série só ganha destaque inicialmente em um episódio de flashback.",
+      "Devido ao teor extremamente explícito de violência e consumo de substâncias nas HQs originais, diversas cenas e arcos dramáticos precisaram ser atenuados ou completamente cortados na adaptação para a TV.",
+      "O herói Translúcido, integrante d'Os Sete na 1ª temporada, não existe nos quadrinhos originais. Ele foi criado exclusivamente para a TV para substituir Jack de Júpiter, cujo conceito de alienígena destoava do tom realista pretendido."
+    ]
   },
   {
     id: 'handmaids-tale',
@@ -58,7 +64,14 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Pastas Dubladas (5 Temps)', url: 'https://drive.google.com/drive/folders/1_scMY_gg0lnH89CznyVFrq_eUmQSmVcO' }
     ],
     rating: '8.4/10 (IMDb)',
-    category: 'action'
+    category: 'action',
+    curiosities: [
+      "Elisabeth Moss gravou quase todas as suas cenas na série sem nenhuma maquiagem para conferir um tom cru, realista e vulnerável à sua personagem.",
+      "A autora Margaret Atwood revelou que se inspirou diretamente no clássico romance distópico '1984' de George Orwell para construir as bases políticas de Gilead.",
+      "Os marcantes vestidos vermelhos das Aias possuem um simbolismo bíblico atrelado à figura histórica de Maria Madalena, contrastando com o azul das Esposas (referência à Virgem Maria).",
+      "No romance original de 1985, a protagonista nunca recebe um nome real, sendo chamada apenas de Offred. A decisão de batizá-la de June partiu inteiramente dos roteiristas da série.",
+      "Fez história ao ser a primeiríssima produção de uma plataforma de streaming a vencer o prestigiado prêmio Emmy de Melhor Série Dramática."
+    ]
   },
   {
     id: 'the-sandman',
@@ -72,7 +85,12 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporadas 1 e 2', url: 'https://drive.google.com/drive/folders/1XsiXMTy59xFUMLroCXrQCXocPzZ4sJ3i' }
     ],
     rating: '7.7/10 (IMDb)',
-    category: 'terror'
+    category: 'terror',
+    curiosities: [
+      "Por conta dos direitos do detetive John Constantine estarem vinculados a outros projetos na época, a produção escalou a excelente Jenna Coleman para dar vida à sua ancestral, Johanna Constantine.",
+      "A fiel bibliotecária do Sonhar, Lucienne, era originalmente desenhada como um homem branco (Lucien) nas páginas das HQs de Neil Gaiman.",
+      "O autor Neil Gaiman recusou dezenas de propostas ruins para adaptar a obra ao cinema ao longo de três décadas, preferindo esperar o surgimento do streaming de alta qualidade para fazer a transição perfeita."
+    ]
   },
   {
     id: 'vincenzo',
@@ -86,7 +104,11 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 1 Dublada', url: 'https://drive.google.com/drive/folders/1Kt5NPNGtTleBA7EAtK47a2FZJLFEIM4U' }
     ],
     rating: '8.4/10 (IMDb)',
-    category: 'dorama'
+    category: 'dorama',
+    curiosities: [
+      "Devido ao pico da pandemia de COVID-19 em 2020, as filmagens na Itália tornaram-se inviáveis. Praticamente todas as cenas ambientadas na Europa foram gravadas em estúdio com tela verde e computação gráfica de ponta na Coreia.",
+      "O actor principal Song Joong-ki passou por um treinamento super intensivo para aprender a falar italiano com a pronúncia e o sotaque corretos para viver o advogado da máfia."
+    ]
   },
   {
     id: 'se-desejos-matassem',
@@ -100,7 +122,14 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/14iC5TeLyLMQQRuqK1uXY45tWaZbbpYsE' }
     ],
     rating: 'Novo (2026)',
-    category: 'dorama'
+    category: 'dorama',
+    curiosities: [
+      "É uma das primeiras produções de terror coreanas de suspense jovem adulto com foco em tecnologia, misturando maldições clássicas com críticas pesadas ao uso obsessivo de redes sociais.",
+      "O enigmático aplicativo maldito 'Girigo' opera sob as mesmas bases de terror tecnológico de clássicos como 'O Chamado' (mídia amaldiçoada com prazo) e 'Death Note' (poder com preço inevitável).",
+      "Diferente de produções tradicionais, foca muito mais na paranoia entre amigos, na culpa pelos desejos realizados e na tensão psicológica do que em sustos fáceis ou violência visual exagerada.",
+      "Funciona como uma grande metáfora social para a pressão por popularidade, meritocracia, aparência física e ansiedade juvenil na Coreia do Sul contemporânea.",
+      "Apresenta um formato de minissérie fechada em 1 temporada, mas a mecânica de propagação da maldição deixa ganchos inteligentes para futuras expansões antológicas."
+    ]
   },
   {
     id: 'constantine',
@@ -115,7 +144,12 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada Única', url: 'https://drive.google.com/drive/folders/10WW3MIWFkGkwum0Q-gmvnJH5C8chHkbi?usp=drive_link' }
     ],
     rating: '8.1/10 (IMDb)',
-    category: 'terror'
+    category: 'terror',
+    curiosities: [
+      "O filme de 2005 estrelado por Keanu Reeves originalmente se chamaria 'Hellblazer', mas o estúdio mudou o título para evitar confusão com 'Hellboy', lançado no mesmo ano.",
+      "A aparência clássica do detetive John Constantine nos quadrinhos (criado por Alan Moore) foi diretamente inspirada no icônico cantor Sting, vocalista do The Police.",
+      "No filme, como um detalhe de má sorte planejado pela produção, o personagem de Reeves fuma exatamente 13 cigarros de uma marca fictícia criada especificamente para o longa."
+    ]
   },
   {
     id: 'millennium',
@@ -132,7 +166,12 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 3', url: 'https://drive.google.com/drive/folders/1F_dzi3rkXbGhDH83VXjW6dUizpzuG1xR?usp=drive_link' }
     ],
     rating: '8.0/10 (IMDb)',
-    category: 'terror'
+    category: 'terror',
+    curiosities: [
+      "Lançada em 1996 pelo criador de 'Arquivo X', Chris Carter, a série buscou capturar os temores reais e a atmosfera sombria, conspiratória e apocalíptica da virada de milênio.",
+      "O protagonista Frank Black, interpretado majestosamente por Lance Henriksen, é tido pela crítica como um dos investigadores mais atormentados e profundos já criados para a TV.",
+      "A série promoveu um antológico crossover oficial direto com 'Arquivo X' no episódio 'Millennium' da 7ª temporada da série mãe, selando de vez o universo compartilhado dos dois shows."
+    ]
   },
   {
     id: 'penny-dreadful',
@@ -148,7 +187,12 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 3', url: 'https://drive.google.com/drive/folders/1brL4CDqZ9RB2QWQjk-vSF-yZnu9N2d7Q?usp=drive_link' }
     ],
     rating: '8.2/10 (IMDb)',
-    category: 'terror'
+    category: 'terror',
+    curiosities: [
+      "A série tem conexões diretas com o universo de James Bond: o produtor Sam Mendes dirigiu 'Skyfall' e 'Spectre', enquanto o ator Timothy Dalton interpretou o icônico agente 007 nos anos 80.",
+      "O título é uma homenagem direta aos fascículos de ficção e terror baratos vendidos por um penique ('penny dreadfuls') no século XIX na Inglaterra vitoriana.",
+      "Para recriar os cenários áridos e desérticos do Velho Oeste americano vistos na 3ª temporada, a produção se deslocou para a clássica região cinematográfica de Almería, no sul da Espanha."
+    ]
   },
   {
     id: 'helix',
@@ -163,7 +207,11 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/11pK7-JE1HUpBRSbsMRKPochaLvDlz3TT?usp=drive_link' }
     ],
     rating: '6.8/10 (IMDb)',
-    category: 'terror'
+    category: 'terror',
+    curiosities: [
+      "A série de terror biológico usa com maestria o contraste estético: o ambiente ártico limpo, excessivamente branco e estéril amplifica o impacto visual das infecções escuras, viscosas e viscerais.",
+      "A direção do show fez escolhas ousadas, tocando trilhas musicais extremamente alegres e descontraídas em meio a cenas de extrema tensão e violência biológica, intensificando a angústia psicológica do espectador."
+    ]
   },
   {
     id: 'into-the-dark',
@@ -178,7 +226,11 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/1Th9LbLl9t2M2oSvF275SS5DuoEEi9BZ3?usp=drive_link' }
     ],
     rating: '6.9/10 (IMDb)',
-    category: 'terror'
+    category: 'terror',
+    curiosities: [
+      "Cada um dos longa-metragens dessa antologia produzida pela Blumhouse foi inspirado diretamente em um feriado ou data comemorativa do mês correspondente ao seu lançamento.",
+      "Devido ao formato atípico de episódios longos de 90 minutos lançados mensalmente, o público e a crítica tratam cada parcela como um filme independente e autônomo."
+    ]
   },
   {
     id: 'the-strain',
@@ -192,7 +244,12 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Disponibilização em Breve', url: 'https://chat.whatsapp.com/Jy23MdpHIqR2nZ0ObVuAzZ' }
     ],
     rating: '7.3/10 (IMDb)',
-    category: 'terror'
+    category: 'terror',
+    curiosities: [
+      "Guillermo del Toro inicialmente tentou vender a ideia diretamente como uma série de TV, mas sem emissoras interessadas, adaptou a história para uma bem-sucedida trilogia literária antes de finalmente levá-la à tela.",
+      "O ator Corey Stoll (Ephraim Goodweather) usou uma peruca controversa na 1ª temporada apenas para afastar comparações visuais diretas com o seu marcante papel anterior na série 'House of Cards'.",
+      "O design dos vampiros ('strigoi') quebra o clichê romântico: eles não possuem caninos, mas sim um longo e assustador apêndice retrátil que dispara de suas gargantas para sugar sangue e injetar parasitas."
+    ]
   },
   {
     id: 'the-witcher-nightmare-of-the-wolf',
@@ -206,7 +263,11 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Filme/Anime Completo', url: 'https://drive.google.com/file/d/13aBHu8EF26OiMPYIgCo7pvfyhF3oAtOb/view' }
     ],
     rating: '7.2/10 (IMDb)',
-    category: 'terror'
+    category: 'terror',
+    curiosities: [
+      "O filme em estilo anime foca no passado do bruxo Vesemir e serve como base narrativa importante sobre a dinâmica de mentoria e paternidade explorada na 2ª temporada do show live-action.",
+      "Durante o violento cerco final a Kaer Morhen, a produção revela sutilmente que o jovem órfão Geralt de Rivia estava entre os sobreviventes resgatados, interligando perfeitamente a linha do tempo."
+    ]
   },
   {
     id: 'o-tunel-do-tempo',
@@ -220,7 +281,12 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Episódios 1-10', url: 'https://drive.google.com/drive/folders/18wFuU2JPkGOo1HCe7KX4rC7wPLC5kNX_' }
     ],
     rating: '7.1/10 (IMDb)',
-    category: 'classicos'
+    category: 'classicos',
+    curiosities: [
+      "A lendária produção de ficção científica criada por Irwin Allen durou apenas uma temporada de 30 episódios, sendo cancelada de surpresa sem que os cientistas voltassem ao presente.",
+      "A icônica trilha sonora instrumental que dita o ritmo das aventuras foi composta por um jovem John Williams, décadas antes de alcançar o estrelato com 'Star Wars'.",
+      "Para manter os custos baixos, a produção frequentemente reciclava figurinos e trechos de batalhas históricas de grandes produções cinematográficas do acervo da 20th Century Fox."
+    ]
   },
   {
     id: 'spider-man-toei',
@@ -235,7 +301,12 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/18invt56cv6dDq6tuZHm71mXSZd1VDmr0' }
     ],
     rating: '7.0/10 (IMDb)',
-    category: 'classicos'
+    category: 'classicos',
+    curiosities: [
+      "Nessa mítica versão Tokusatsu da Toei Company, o Aranha não é Peter Parker, mas o jovem motoqueiro Takuya Yamashiro, que herda os poderes do guerreiro alienígena Garia do Planeta Spider.",
+      "O seriado introduziu o robô gigante 'Leopardon', um conceito tão popular que mudou para sempre o gênero Tokusatsu e inspirou a Marvel a adotar mecânicas semelhantes mais tarde nas franquias Super Sentai.",
+      "Apesar das mudanças brutais em relação aos quadrinhos, Stan Lee elogiou publicamente os efeitos práticos, a agilidade do dublê do Aranha japonês e a direção da série."
+    ]
   },
   {
     id: 'tapas-e-beijos',
@@ -253,7 +324,12 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 5', url: 'https://drive.google.com/drive/folders/1-H4XG1U4sWgc_UcOA9sOzClGcaNn4tgx' }
     ],
     rating: '8.1/10 (IMDb)',
-    category: 'comedy'
+    category: 'comedy',
+    curiosities: [
+      "Antes de estrearem como Fátima e Sueli, Fernanda Torres e Andréa Beltrão protagonizaram o brilhante 'Programa Piloto' de fim de ano, cuja ótima química fez a Globo encomendar a série semanal.",
+      "O inconfundível tema de abertura interpretado originalmente pela Banda Calypso nas primeiras temporadas foi refeito a partir da 4ª temporada sob a voz do lendário cantor Sidney Magal.",
+      "A consagrada atriz internacional Sônia Braga fez uma participação super especial na série como Helô, a mãe distante e charmosa da personagem Fátima."
+    ]
   },
   {
     id: '50-states-of-fright',
@@ -269,7 +345,12 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/11IAPiVkqw_0cvIoqrYzNWGbEFBqRc0Xw?usp=drive_link' }
     ],
     rating: '6.3/10 (IMDb)',
-    category: 'terror'
+    category: 'terror',
+    curiosities: [
+      "Produzida pelo aclamado diretor Sam Raimi ('Evil Dead' e 'Spider-Man'), a série foca no folclore regional e em lendas urbanas assustadoras de diferentes estados norte-americanos.",
+      "A antologia foi originalmente desenvolvida para a extinta plataforma de streaming Quibi, sendo formatada em episódios curtos de 8 a 10 minutos para consumo rápido no celular.",
+      "A série conta com um elenco de estrelas notáveis, incluindo Rachel Brosnahan (The Marvelous Mrs. Maisel), Taissa Farmiga (American Horror Story) e Asa Butterfield (Sex Education)."
+    ]
   }
 ];
 
@@ -277,6 +358,17 @@ export default function ChrisRecommends() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState<'all' | 'terror' | 'action' | 'dorama' | 'classicos' | 'comedy' | 'breve'>('all');
   const [selectedShow, setSelectedShow] = useState<RecommendedShow | null>(null);
+  
+  const [expandedSynopsis, setExpandedSynopsis] = useState<Record<string, boolean>>({});
+  const [expandedCuriosities, setExpandedCuriosities] = useState<Record<string, boolean>>({});
+
+  const toggleSynopsis = (id: string) => {
+    setExpandedSynopsis(prev => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const toggleCuriosities = (id: string) => {
+    setExpandedCuriosities(prev => ({ ...prev, [id]: !prev[id] }));
+  };
 
   const filteredShows = CHRIS_SHOWS.filter(show => {
     const matchesSearch = show.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -306,7 +398,7 @@ export default function ChrisRecommends() {
             𝐀𝐫𝐪𝐮𝐢𝐯𝐨𝐬 𝐒𝐞𝐜𝐫𝐞𝐭... — Indicações Multigêneros
           </h2>
           <p className="text-zinc-400 text-sm mt-1 max-w-3xl">
-            Procurando produções cabulosas? O Chris separou as melhores séries de terror, doramas de mistério, clássicos retrô e grandes sucessos com links diretos do Google Drive!
+            Procurando produções cabulosas? A Chris separou as melhores séries de terror, doramas de mistério, clássicos retrô e grandes sucessos com links diretos do Google Drive!
           </p>
         </div>
         
@@ -322,8 +414,8 @@ export default function ChrisRecommends() {
         </div>
         <div className="space-y-1.5">
           <p className="text-zinc-200 text-sm font-semibold font-serif flex items-center gap-2">
-            <span>Dica do Chris:</span>
-            <span className="text-xs px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 font-mono">Caçador Experiente</span>
+            <span>Dica da Chris:</span>
+            <span className="text-xs px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 font-mono">Caçadora Experiente</span>
           </p>
           <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed italic">
             "Faaaaala Caçadores! Preparem a pipoca, porque esta segunda grande atualização traz muito mais do que terror! Além dos pôsteres oficiais 100% corrigidos com hospedagem de alta qualidade, adicionei sucessos de ação como The Boys, clássicos lendários da ficção científica, doramas espetaculares de mistério e até comédia brasileira. Tudo organizado em pastas diretas!"
@@ -429,7 +521,7 @@ export default function ChrisRecommends() {
           <div className="max-w-md mx-auto space-y-2">
             <h3 className="text-zinc-200 font-bold text-lg">Novas Outras Séries & Gêneros em Breve!</h3>
             <p className="text-zinc-400 text-xs sm:text-sm">
-              Chris já está analisando novos arquivos de outros gêneros como **Ficção Científica complexa, Suspense Policial, Thriller de Mistério e Clássicos de Monstros**! Fique ligado que novas atualizações chegarão em breve.
+              A Chris já está analisando novos arquivos de outros gêneros como **Ficção Científica complexa, Suspense Policial, Thriller de Mistério e Clássicos de Monstros**! Fique ligado que novas atualizações chegarão em breve.
             </p>
           </div>
           <div className="inline-flex items-center gap-1.5 text-amber-500 text-xs font-mono">
@@ -440,7 +532,7 @@ export default function ChrisRecommends() {
         <>
           {filteredShows.length === 0 ? (
             <div className="text-center py-12 border border-dashed border-zinc-800 rounded-2xl">
-              <p className="text-zinc-400 text-sm">Nenhuma recomendação do Chris encontrada com esses filtros.</p>
+              <p className="text-zinc-400 text-sm">Nenhuma recomendação da Chris encontrada com esses filtros.</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -488,10 +580,53 @@ export default function ChrisRecommends() {
                       </div>
                     </div>
 
-                    {/* Synopsis */}
-                    <div className="text-xs text-zinc-400 leading-relaxed line-clamp-3 bg-zinc-950/20 p-2.5 rounded-lg border border-zinc-950">
-                      {show.synopsis}
+                    {/* Synopsis with "Ler mais" toggle to fix truncation/UX */}
+                    <div className="bg-zinc-950/20 p-3 rounded-xl border border-zinc-950 space-y-2">
+                      <p className={`text-xs text-zinc-400 leading-relaxed ${expandedSynopsis[show.id] ? '' : 'line-clamp-3'}`}>
+                        {show.synopsis}
+                      </p>
+                      {show.synopsis.length > 80 && (
+                        <button
+                          onClick={() => toggleSynopsis(show.id)}
+                          className="text-[10px] text-amber-500 hover:text-amber-400 font-bold uppercase tracking-wider transition cursor-pointer inline-flex items-center gap-1"
+                        >
+                          <span>{expandedSynopsis[show.id] ? 'Ver Menos' : 'Ler Sinopse Completa'}</span>
+                        </button>
+                      )}
                     </div>
+
+                    {/* Curiosities / Bastidores Expandable Section */}
+                    {show.curiosities && show.curiosities.length > 0 && (
+                      <div className="bg-zinc-950/10 border border-zinc-900 rounded-xl p-3 space-y-2">
+                        <button
+                          onClick={() => toggleCuriosities(show.id)}
+                          className="flex items-center justify-between w-full text-left text-[11px] font-semibold text-amber-500/90 hover:text-amber-400 transition cursor-pointer"
+                        >
+                          <span className="flex items-center gap-1.5">
+                            <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                            <span>Dossiê: Curiosidades</span>
+                          </span>
+                          <span className="text-[9px] uppercase font-mono tracking-wider text-zinc-500">
+                            {expandedCuriosities[show.id] ? 'Recolher' : `Ver (${show.curiosities.length})`}
+                          </span>
+                        </button>
+                        
+                        {expandedCuriosities[show.id] && (
+                          <motion.ul 
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            className="space-y-2 text-[11px] text-zinc-400 leading-relaxed bg-zinc-950/40 p-2.5 rounded-lg border border-zinc-950/60"
+                          >
+                            {show.curiosities.map((item, idx) => (
+                              <li key={idx} className="flex gap-2 items-start">
+                                <span className="text-amber-500 shrink-0">•</span>
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </motion.ul>
+                        )}
+                      </div>
+                    )}
 
                     {/* Constantine's special adendum or warnings */}
                     {show.adendum && (

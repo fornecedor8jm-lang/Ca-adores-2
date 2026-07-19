@@ -4,31 +4,32 @@
  */
 
 import React from 'react';
-import { Download, Smartphone, Info, ShieldCheck, Gamepad2, ArrowRight, HelpCircle } from 'lucide-react';
+import { Download, Smartphone, Info, ShieldCheck, Gamepad2, ArrowRight, HelpCircle, Apple } from 'lucide-react';
 
 export default function SupernaturalGame() {
-  const gameDownloadUrl = 'https://itales-ru-supernatural.br.uptodown.com/android/download';
+  const androidDownloadUrl = 'https://itales-ru-supernatural.br.uptodown.com/android/download';
+  const iosDownloadUrl = 'https://apps.apple.com/us/app/supernatural-the-worlds-end/id1438436649?l=pt-BR';
 
   const installSteps = [
     {
       step: '01',
-      title: 'Baixe o Arquivo APK',
-      desc: 'Clique no botão de download acima para ser redirecionado ao Uptodown de forma segura e baixar o instalador oficial (.apk).',
+      title: 'Baixe o Jogo (Android / iOS)',
+      desc: 'Escolha a sua plataforma. Para Android, clique no botão de download para obter o APK via Uptodown. Para iOS, use o botão da App Store oficial.',
     },
     {
       step: '02',
-      title: 'Habilite Fontes Desconhecidas',
-      desc: 'No seu dispositivo Android, acesse Configurações > Segurança (ou Privacidade) e ative a permissão para "Instalar apps de fontes desconhecidas" para o seu navegador ou gerenciador de arquivos.',
+      title: 'Configurações (Só Android)',
+      desc: 'No Android, acesse Configurações > Segurança e ative "Instalar de fontes desconhecidas". No iOS, a instalação é 100% direta e automática.',
     },
     {
       step: '03',
-      title: 'Realize a Instalação',
-      desc: 'Abra o seu gerenciador de arquivos, vá até a pasta "Downloads", toque no arquivo APK baixado e selecione "Instalar".',
+      title: 'Instale o Aplicativo',
+      desc: 'No Android, toque no arquivo APK baixado e selecione "Instalar". No iOS, basta confirmar o download e aguardar a instalação no seu aparelho.',
     },
     {
       step: '04',
       title: 'Inicie a Caçada!',
-      desc: 'Pronto! Toque no ícone do jogo no seu menu de aplicativos e comece a sua jornada investigativa ao lado dos Winchesters.',
+      desc: 'Pronto! Abra o ícone do jogo no seu celular e comece a desvendar casos paranormais incríveis com Sam, Dean e os caçadores.',
     }
   ];
 
@@ -42,7 +43,7 @@ export default function SupernaturalGame() {
         <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-red-950/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-8 border-b border-zinc-900 mb-8">
-          <div className="space-y-3 max-w-3xl text-center lg:text-left">
+          <div className="space-y-3 max-w-2xl text-center lg:text-left">
             <div className="inline-flex items-center gap-2 text-amber-500 font-bold uppercase tracking-wider text-xs sm:text-sm justify-center lg:justify-start">
               <Gamepad2 className="w-4 h-4 animate-bounce" />
               <span>Aventura Oficial Mobile</span>
@@ -61,29 +62,53 @@ export default function SupernaturalGame() {
               <span>•</span>
               <span className="flex items-center gap-1.5">
                 <Smartphone className="w-3.5 h-3.5 text-amber-500" />
-                <span>Exclusivo Android</span>
+                <span>Disponível para Android & iOS</span>
               </span>
             </div>
           </div>
 
-          <div className="w-full lg:w-auto shrink-0 flex flex-col items-center gap-2">
-            <a
-              href={gameDownloadUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 px-6 py-4 w-full lg:w-72 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-zinc-950 font-bold rounded-xl transition duration-200 shadow-lg shadow-amber-500/10 active:scale-98 cursor-pointer"
-              id="btn-download-game-apk"
-            >
-              <Download className="w-5 h-5 shrink-0" />
-              <div className="text-left leading-tight">
-                <div className="text-xs uppercase tracking-wider font-extrabold opacity-75">Download Direto</div>
-                <div className="text-sm">Baixar APK do Jogo</div>
-              </div>
-              <ArrowRight className="w-4 h-4 ml-auto lg:ml-2" />
-            </a>
-            <span className="text-[10px] text-zinc-500 font-mono">
-              Hospedado no portal parceiro Uptodown
-            </span>
+          <div className="w-full lg:w-auto shrink-0 flex flex-col sm:flex-row lg:flex-col gap-4 items-stretch justify-center">
+            {/* Android APK Download Button */}
+            <div className="flex flex-col items-center gap-1.5 flex-1">
+              <a
+                href={androidDownloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 px-5 py-3.5 w-full lg:w-72 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-zinc-950 font-bold rounded-xl transition duration-200 shadow-lg shadow-amber-500/10 active:scale-98 cursor-pointer text-center"
+                id="btn-download-game-apk"
+              >
+                <Smartphone className="w-5 h-5 shrink-0" />
+                <div className="text-left leading-tight">
+                  <div className="text-[10px] uppercase tracking-wider font-extrabold opacity-75">Versão Android</div>
+                  <div className="text-sm">Baixar APK (Uptodown)</div>
+                </div>
+                <ArrowRight className="w-4 h-4 ml-auto" />
+              </a>
+              <span className="text-[9px] text-zinc-500 font-mono">
+                Verificado e hospedado no Uptodown
+              </span>
+            </div>
+
+            {/* iOS App Store Button */}
+            <div className="flex flex-col items-center gap-1.5 flex-1">
+              <a
+                href={iosDownloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 px-5 py-3.5 w-full lg:w-72 bg-zinc-900 hover:bg-zinc-855 text-white border border-zinc-800 font-bold rounded-xl transition duration-200 shadow-lg active:scale-98 cursor-pointer text-center"
+                id="btn-download-game-ios"
+              >
+                <Apple className="w-5 h-5 shrink-0 text-amber-500 animate-pulse" />
+                <div className="text-left leading-tight">
+                  <div className="text-[10px] uppercase tracking-wider font-extrabold text-zinc-400">Versão iOS</div>
+                  <div className="text-sm">Baixar na App Store</div>
+                </div>
+                <ArrowRight className="w-4 h-4 ml-auto text-amber-500" />
+              </a>
+              <span className="text-[9px] text-zinc-500 font-mono">
+                Aplicativo oficial na Apple Store
+              </span>
+            </div>
           </div>
         </div>
 
@@ -127,7 +152,7 @@ export default function SupernaturalGame() {
               Guia Passo a Passo de Instalação
             </h3>
             <p className="text-xs text-zinc-400">
-              Siga estas instruções simples para rodar o jogo no seu celular Android sem qualquer complicação.
+              Siga estas instruções simples para rodar o jogo no seu celular Android ou iOS sem qualquer complicação.
             </p>
           </div>
         </div>
@@ -163,9 +188,9 @@ export default function SupernaturalGame() {
         <div className="bg-amber-500/5 border border-amber-500/10 p-4 rounded-xl flex items-start gap-3">
           <HelpCircle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
           <div className="space-y-1">
-            <h5 className="text-xs font-bold text-zinc-200">Por que é necessário ativar "fontes desconhecidas"?</h5>
+            <h5 className="text-xs font-bold text-zinc-200">Por que é necessário ativar "fontes desconhecidas" no Android?</h5>
             <p className="text-xs text-zinc-400 leading-relaxed">
-              O Android categoriza qualquer aplicativo instalado fora da Google Play Store oficial como "fonte desconhecida". O instalador Uptodown é um dos repositórios mobile mais confiáveis do mundo, garantindo um arquivo limpo, seguro e verificado contra ameaças.
+              O Android categoriza qualquer aplicativo instalado de fora da Google Play Store como "fonte desconhecida". O repositório do Uptodown é um dos mais renomados do mundo, garantindo que o APK seja 100% verificado, seguro e livre de malware. No iOS, por ser instalado direto pela loja App Store, nenhuma configuração extra é necessária.
             </p>
           </div>
         </div>
