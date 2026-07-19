@@ -35,7 +35,7 @@ const CHRIS_SHOWS: RecommendedShow[] = [
     genre: 'Terror / Sobrenatural / DC Comics',
     status: 'Série de 2014, cancelada após a 1ª temporada.',
     adendum: 'O personagem continua vivo no "Arrowverse" com o mesmo ator, Matt Ryan. Ele faz sua primeira aparição na Temporada 3, Episódio 9 ("Beebo the God of War") de Legends of Tomorrow e tornou-se parte do elenco principal regular a partir da Temporada 4 até a Temporada 6.',
-    posterUrl: 'http://www.impawards.com/tv/posters/constantine.jpg',
+    posterUrl: 'https://files.catbox.moe/6duvfe.jpg',
     seasons: [
       { name: 'Temporada Única', url: 'https://drive.google.com/drive/folders/10WW3MIWFkGkwum0Q-gmvnJH5C8chHkbi?usp=drive_link' }
     ],
@@ -48,7 +48,7 @@ const CHRIS_SHOWS: RecommendedShow[] = [
     year: '2026',
     genre: 'Dorama / Terror / Suspense',
     status: 'Temporadas: 1',
-    posterUrl: 'https://m.media-amazon.com/images/M/MV5BMGU3M2ZlNjctZjc3ZS00Y2E4LWI1NDgtYmI0ZDI0ZjE1N2ZlXkEyXkFqcGc@._V1_.jpg',
+    posterUrl: 'https://files.catbox.moe/vhqws9.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/14iC5TeLyLMQQRuqK1uXY45tWaZbbpYsE' }
     ],
@@ -62,7 +62,7 @@ const CHRIS_SHOWS: RecommendedShow[] = [
     genre: 'Investigação / Terror Psicológico',
     creator: 'Chris Carter',
     status: 'Série clássica de 3 temporadas, do mesmo criador de Arquivo X.',
-    posterUrl: 'http://www.impawards.com/tv/posters/millennium.jpg',
+    posterUrl: 'https://files.catbox.moe/xr6ggd.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/1tL3DQlxphFtrq3LUr1VmtIb50-uVA7AF?usp=drive_link' },
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/1GPow5pCxaS30NzduDMBaiqrL4tmtpgI0?usp=drive_link' },
@@ -77,7 +77,7 @@ const CHRIS_SHOWS: RecommendedShow[] = [
     year: '2014 - 2016',
     genre: 'Terror Gótico / Fantasia Sombria',
     status: 'Série premiada com elenco estrelar, incluindo Eva Green.',
-    posterUrl: 'http://www.impawards.com/tv/posters/penny_dreadful.jpg',
+    posterUrl: 'https://files.catbox.moe/kgr7ny.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/1hLYxAu5bz3kJjSr9ZUO8QnwLAh0yDqTz?usp=drive_link' },
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/1FIxTxPi-NK5Rh0ms6SQ9ysWmrYF8Rj_e?usp=drive_link' },
@@ -92,7 +92,7 @@ const CHRIS_SHOWS: RecommendedShow[] = [
     year: '2014 - 2015',
     genre: 'Ficção Científica / Terror / Epidemia',
     status: 'Suspense claustrofóbico em 2 temporadas.',
-    posterUrl: 'http://www.impawards.com/tv/posters/helix.jpg',
+    posterUrl: 'https://static.tvmaze.com/uploads/images/medium_portrait/126/316697.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/11II_djSaEChhQ1rmgcuGuYoNqGXsH5wz?usp=drive_link' },
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/11pK7-JE1HUpBRSbsMRKPochaLvDlz3TT?usp=drive_link' }
@@ -106,7 +106,7 @@ const CHRIS_SHOWS: RecommendedShow[] = [
     year: '2018 - 2021',
     genre: 'Antologia / Terror Slasher / Sobrenatural',
     status: 'Produzido pela Blumhouse Television.',
-    posterUrl: 'http://www.impawards.com/tv/posters/into_the_dark.jpg',
+    posterUrl: 'https://static.tvmaze.com/uploads/images/medium_portrait/299/749153.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/1pZOqC0tiJxwXyhAtHdUR2RMb3of7m-xT?usp=drive_link' },
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/1Th9LbLl9t2M2oSvF275SS5DuoEEi9BZ3?usp=drive_link' }
@@ -121,7 +121,7 @@ const CHRIS_SHOWS: RecommendedShow[] = [
     genre: 'Antologia / Lendas Urbanas / Terror',
     creator: 'Sam Raimi',
     status: 'Criada pelo aclamado diretor de Evil Dead.',
-    posterUrl: 'https://m.media-amazon.com/images/M/MV5BNmU4MGUxZGEtNWRhYy00MDlhLTg1MTktYjcyZGI1MzVjZDA3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg',
+    posterUrl: 'https://static.tvmaze.com/uploads/images/medium_portrait/379/947766.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/1cZ0SybV1TFmaguOnEL8HrhPiM_OkJMh4?usp=drive_link' },
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/11IAPiVkqw_0cvIoqrYzNWGbEFBqRc0Xw?usp=drive_link' }
@@ -160,7 +160,7 @@ export default function ChrisRecommends() {
         <div>
           <div className="flex items-center gap-2 text-amber-500 font-bold uppercase tracking-wider text-sm mb-1.5">
             <Sparkles className="w-4 h-4 text-amber-500" />
-            <span>Chris Recomenda</span>
+            <span>Séries Recomendadas</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-100 tracking-tight">
             𝐀𝐫𝐪𝐮𝐢𝐯𝐨𝐬 𝐒𝐞𝐜𝐫𝐞𝐭𝐨𝐬 — Indicações de Terror & Sobrenatural
@@ -301,7 +301,7 @@ export default function ChrisRecommends() {
                           referrerPolicy="no-referrer"
                           onError={(e) => {
                             // fallback if image blocks
-                            (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=300&auto=format&fit=cover';
+                            (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=300&auto=format&fit=cover';
                           }}
                         />
                       </div>

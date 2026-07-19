@@ -4,18 +4,18 @@
  */
 
 import React, { useState } from 'react';
-import { Film, Puzzle, Trophy, Tv, BookOpen, Flame, MessageCircle, AlertTriangle, Lightbulb, Sparkles, Bug, Bell } from 'lucide-react';
+import { Film, Puzzle, Tv, BookOpen, Flame, MessageCircle, AlertTriangle, Lightbulb, Sparkles, Bug, Bell, Ghost, Gamepad2 } from 'lucide-react';
 import Header from './components/Header';
 import MovieSession from './components/MovieSession';
 import GincanaPuzzle from './components/GincanaPuzzle';
 import WatchSeries from './components/WatchSeries';
-import Leaderboard from './components/Leaderboard';
 import Comunicados from './components/Comunicados';
+import SupernaturalGame from './components/SupernaturalGame';
 import ChrisRecommends from './components/ChrisRecommends';
 import MaintenanceMode from './components/MaintenanceMode';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'comunicados' | 'cineclube' | 'gincana' | 'assistir' | 'leaderboard' | 'chris'>('comunicados');
+  const [activeTab, setActiveTab] = useState<'comunicados' | 'cineclube' | 'gincana' | 'assistir' | 'jogo' | 'chris'>('comunicados');
 
   const IS_MAINTENANCE = false;
 
@@ -87,8 +87,21 @@ export default function App() {
               }`}
               id="tab-assistir"
             >
-              <Tv className="w-4 h-4 shrink-0" />
-              <span>Assistir de Graça</span>
+              <Ghost className="w-4 h-4 shrink-0" />
+              <span>Maratona Supernatural</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('jogo')}
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wide uppercase transition duration-200 cursor-pointer ${
+                activeTab === 'jogo'
+                  ? 'bg-amber-500 text-zinc-950 shadow-md shadow-amber-500/10'
+                  : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900'
+              }`}
+              id="tab-jogo"
+            >
+              <Gamepad2 className="w-4 h-4 shrink-0" />
+              <span>Supernatural: O Jogo</span>
             </button>
 
             <button
@@ -101,20 +114,7 @@ export default function App() {
               id="tab-chris"
             >
               <Sparkles className="w-4 h-4 shrink-0" />
-              <span>Chris Recomenda</span>
-            </button>
-
-            <button
-              onClick={() => setActiveTab('leaderboard')}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wide uppercase transition duration-200 cursor-pointer ${
-                activeTab === 'leaderboard'
-                  ? 'bg-amber-500 text-zinc-950 shadow-md shadow-amber-500/10'
-                  : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900'
-              }`}
-              id="tab-leaderboard"
-            >
-              <Trophy className="w-4 h-4 shrink-0" />
-              <span>Classificação Gincana</span>
+              <span>Séries Recomendadas</span>
             </button>
           </nav>
 
@@ -145,12 +145,12 @@ export default function App() {
             <WatchSeries />
           )}
 
-          {activeTab === 'chris' && (
-            <ChrisRecommends />
+          {activeTab === 'jogo' && (
+            <SupernaturalGame />
           )}
 
-          {activeTab === 'leaderboard' && (
-            <Leaderboard />
+          {activeTab === 'chris' && (
+            <ChrisRecommends />
           )}
         </div>
 
@@ -181,11 +181,11 @@ export default function App() {
             Desenvolvido para a Comunidade Oficial de Fãs <strong>Caçadores Winchesters</strong>.
           </p>
           <div className="flex justify-center gap-4 text-zinc-600">
-            <a href="https://itales-ru-supernatural.br.uptodown.com/android/download" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition">Download App Android</a>
+            <a href="#supernatural-jogo" onClick={(e) => { e.preventDefault(); setActiveTab('jogo'); }} className="hover:text-amber-500 transition">Supernatural: O Jogo</a>
             <span>•</span>
-            <a href="#gincana-quebracabeca" onClick={() => setActiveTab('gincana')} className="hover:text-amber-500 transition">Gincana do Quebra-Cabeça</a>
+            <a href="#gincana-quebracabeca" onClick={(e) => { e.preventDefault(); setActiveTab('gincana'); }} className="hover:text-amber-500 transition">Gincana do Quebra-Cabeça</a>
             <span>•</span>
-            <a href="#watch-supernatural" onClick={() => setActiveTab('assistir')} className="hover:text-amber-500 transition">Assistir de Graça</a>
+            <a href="#watch-supernatural" onClick={(e) => { e.preventDefault(); setActiveTab('assistir'); }} className="hover:text-amber-500 transition">Maratona Supernatural</a>
           </div>
           <p className="text-[10px] text-zinc-600">
             © 2026 Caçadores Winchesters. Todos os direitos reservados aos respectivos criadores.

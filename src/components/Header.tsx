@@ -90,25 +90,6 @@ export default function Header() {
                 </button>
               </div>
             </div>
-
-            {/* WhatsApp Group Callout */}
-            <div className="flex flex-col gap-1.5">
-              <a 
-                href="https://chat.whatsapp.com/Jy23MdpHIqR2nZ0ObVuAzZ"
-                target="_blank"
-                rel="noopener noreferrer"
-                referrerPolicy="no-referrer"
-                className="flex items-center justify-center gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 active:scale-98 text-white font-bold text-sm rounded-xl transition shadow-lg shadow-emerald-950/20"
-                id="btn-whatsapp-group"
-              >
-                <MessageCircle className="w-4 h-4 fill-current" />
-                <span>Entrar no WhatsApp</span>
-              </a>
-              <div className="flex justify-between items-center px-1 text-xs text-zinc-400">
-                <span>Votações & Debates</span>
-                <span className="text-emerald-500 font-medium">Grupo Oficial</span>
-              </div>
-            </div>
           </div>
 
         </div>

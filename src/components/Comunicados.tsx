@@ -170,6 +170,49 @@ export default function Comunicados() {
 
   return (
     <div className="space-y-8" id="comunicados-tab-view">
+
+      {/* 💬 Grupo de WhatsApp Section */}
+      <section className="bg-zinc-950 border border-zinc-900 rounded-2xl p-6 sm:p-8 relative overflow-hidden" id="grupo-whatsapp-section">
+        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -left-12 -bottom-12 w-48 h-48 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+        
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div className="space-y-3 max-w-2xl">
+            <div className="flex items-center gap-2 text-emerald-500 font-bold uppercase tracking-wider text-xs sm:text-sm">
+              <MessageCircle className="w-4 h-4 fill-current animate-pulse" />
+              <span>Comunidade Oficial no WhatsApp</span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold text-zinc-100 font-sans">
+              Entrar pelo WhatsApp
+            </h3>
+            <p className="text-zinc-300 text-sm leading-relaxed">
+              Fique por dentro de todos os avisos em primeira mão! No nosso grupo oficial você participa das votações semanais de episódios para o Cineclube, debate teorias de Supernatural, envia ideias e interage com outros caçadores.
+            </p>
+            <div className="flex flex-wrap gap-4 text-xs text-zinc-400 font-mono">
+              <span className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                <span>Votações & Debates Ativos</span>
+              </span>
+              <span>•</span>
+              <span>Livre de Spams e Anúncios</span>
+            </div>
+          </div>
+
+          <div className="shrink-0 w-full lg:w-auto">
+            <a
+              href="https://chat.whatsapp.com/Jy23MdpHIqR2nZ0ObVuAzZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 w-full lg:w-auto bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold text-sm uppercase tracking-wider rounded-xl transition duration-200 shadow-lg shadow-emerald-950/25 active:scale-98 cursor-pointer"
+              id="btn-whatsapp-comunicados"
+            >
+              <MessageCircle className="w-5 h-5 fill-current" />
+              <span>Entrar no Grupo Oficial</span>
+            </a>
+          </div>
+        </div>
+      </section>
       
       {/* 🕒 Horário Oficial do Portal & Cronograma Section */}
       <section className="bg-zinc-950 border border-zinc-900 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">

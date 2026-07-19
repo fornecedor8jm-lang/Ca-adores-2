@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Play, ExternalLink, Film, Tv, Info, AlertCircle, ShieldCheck } from 'lucide-react';
+import { Play, ExternalLink, Film, Tv, Info, AlertCircle, ShieldCheck, Ghost } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface SeasonLink {
@@ -120,14 +120,14 @@ export default function WatchSeries() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-zinc-900">
         <div>
           <div className="flex items-center gap-2 text-amber-500 font-bold uppercase tracking-wider text-sm mb-1.5">
-            <Tv className="w-4 h-4" />
-            <span>Assista de Graça</span>
+            <Ghost className="w-4 h-4 text-amber-500 animate-pulse" />
+            <span>Maratona Supernatural</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-100 font-sans tracking-tight">
-            𝐒𝐮𝐩𝐞𝐫𝐧𝐚𝐭𝐮𝐫𝐚𝐥 — Episódios Completos
+            𝐌𝐚𝐫𝐚𝐭𝐨𝐧𝐚 𝐒𝐮𝐩𝐞𝐫𝐧𝐚𝐭𝐮𝐫𝐚𝐥 — 15 Temporadas Completas
           </h2>
           <p className="text-zinc-400 text-sm mt-1 max-w-3xl">
-            Acesse o acervo completo da série hospedado via Google Drive e Google Photos de forma gratuita com áudio em Português!
+            Acesse o acervo completo da série reunindo todas as 15 temporadas em um único lugar, hospedado de forma gratuita e segura!
           </p>
         </div>
         
