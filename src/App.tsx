@@ -13,6 +13,7 @@ import Comunicados from './components/Comunicados';
 import SupernaturalGame from './components/SupernaturalGame';
 import ChrisRecommends from './components/ChrisRecommends';
 import MaintenanceMode from './components/MaintenanceMode';
+import FooterClocks from './components/FooterClocks';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'comunicados' | 'cineclube' | 'gincana' | 'assistir' | 'jogo' | 'chris'>('comunicados');
@@ -176,16 +177,12 @@ export default function App() {
 
       {/* Footer */}
       <footer className="mt-auto border-t border-zinc-900 bg-zinc-950 py-8 text-center text-xs text-zinc-500">
-        <div className="max-w-7xl mx-auto px-4 space-y-3">
+        <div className="max-w-7xl mx-auto px-4 space-y-4">
           <p>
             Desenvolvido para a Comunidade Oficial de Fãs <strong>Caçadores Winchesters</strong>.
           </p>
-          <div className="flex justify-center gap-4 text-zinc-600">
-            <a href="#supernatural-jogo" onClick={(e) => { e.preventDefault(); setActiveTab('jogo'); }} className="hover:text-amber-500 transition">Supernatural: O Jogo</a>
-            <span>•</span>
-            <a href="#gincana-quebracabeca" onClick={(e) => { e.preventDefault(); setActiveTab('gincana'); }} className="hover:text-amber-500 transition">Gincana do Quebra-Cabeça</a>
-            <span>•</span>
-            <a href="#watch-supernatural" onClick={(e) => { e.preventDefault(); setActiveTab('assistir'); }} className="hover:text-amber-500 transition">Maratona Supernatural</a>
+          <div>
+            <FooterClocks />
           </div>
           <p className="text-[10px] text-zinc-600">
             © 2026 Caçadores Winchesters. Todos os direitos reservados aos respectivos criadores.

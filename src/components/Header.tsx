@@ -4,17 +4,13 @@
  */
 
 import React, { useState } from 'react';
-import { Download, Share2, Shield, Smartphone, Globe, Info, QrCode, X, MessageCircle } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { Share2, Shield, Globe, Info } from 'lucide-react';
 
 interface HeaderProps {
 }
 
 export default function Header() {
-  const [showQR, setShowQR] = useState(false);
   const [copied, setCopied] = useState(false);
-
-  const appDownloadUrl = 'https://itales-ru-supernatural.br.uptodown.com/android/download';
 
   const handleShare = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -61,37 +57,6 @@ export default function Header() {
             </div>
           </div>
 
-          {/* User Status Card & App Download */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full md:w-auto">
-            {/* Android App Download Callout */}
-            <div className="flex flex-col gap-1.5">
-              <a 
-                href={appDownloadUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 active:scale-98 text-zinc-950 font-bold text-sm rounded-xl transition shadow-lg shadow-amber-950/20"
-                id="btn-app-download"
-              >
-                <Smartphone className="w-4 h-4" />
-                <span>Baixar App Android</span>
-                <Download className="w-4 h-4" />
-              </a>
-              <div className="flex justify-between items-center px-1 text-xs text-zinc-400">
-                <span className="flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
-                  100% Seguro & Grátis
-                </span>
-                <button 
-                  onClick={() => setShowQR(true)}
-                  className="text-amber-500/90 hover:text-amber-400 flex items-center gap-1 hover:underline cursor-pointer"
-                >
-                  <QrCode className="w-3.5 h-3.5" />
-                  QR Code
-                </button>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         {/* Quick info bar / Share */}
@@ -117,88 +82,6 @@ export default function Header() {
           </button>
         </div>
       </div>
-
-      {/* QR Code Modal Popup */}
-      <AnimatePresence>
-        {showQR && (
-          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-            <motion.div 
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 max-w-sm w-full text-center relative shadow-2xl"
-            >
-              <button 
-                onClick={() => setShowQR(false)}
-                className="absolute top-4 right-4 text-zinc-400 hover:text-zinc-200 p-1 bg-zinc-800 rounded-full transition"
-              >
-                <X className="w-4 h-4" />
-              </button>
-              <h3 className="text-lg font-bold text-zinc-100 mb-2 font-sans uppercase">Escaneie para Baixar</h3>
-              <p className="text-xs text-zinc-400 mb-4">Aponte a câmera do seu celular Android para instalar o App Oficial da Comunidade.</p>
-              
-              {/* Simulated QR Code beautifully styled */}
-              <div className="bg-white p-4 rounded-xl inline-block mb-4 shadow-inner border-2 border-amber-500/30">
-                <svg className="w-44 h-44" viewBox="0 0 100 100">
-                  <rect width="100" height="100" fill="white" />
-                  {/* Position detection patterns */}
-                  <rect x="5" y="5" width="25" height="25" fill="black" />
-                  <rect x="9" y="9" width="17" height="17" fill="white" />
-                  <rect x="13" y="13" width="9" height="9" fill="black" />
-
-                  <rect x="70" y="5" width="25" height="25" fill="black" />
-                  <rect x="74" y="9" width="17" height="17" fill="white" />
-                  <rect x="78" y="13" width="9" height="9" fill="black" />
-
-                  <rect x="5" y="70" width="25" height="25" fill="black" />
-                  <rect x="9" y="74" width="17" height="17" fill="white" />
-                  <rect x="13" y="78" width="9" height="9" fill="black" />
-                  
-                  {/* Random QR code modules */}
-                  <rect x="35" y="10" width="5" height="5" fill="black" />
-                  <rect x="45" y="5" width="10" height="5" fill="black" />
-                  <rect x="60" y="15" width="5" height="10" fill="black" />
-                  <rect x="35" y="25" width="15" height="5" fill="black" />
-                  
-                  <rect x="5" y="35" width="5" height="15" fill="black" />
-                  <rect x="15" y="45" width="15" height="5" fill="black" />
-                  <rect x="25" y="35" width="5" height="15" fill="black" />
-                  <rect x="35" y="40" width="10" height="10" fill="black" />
-                  <rect x="50" y="35" width="5" height="5" fill="black" />
-                  <rect x="55" y="45" width="10" height="5" fill="black" />
-                  
-                  <rect x="70" y="35" width="15" height="5" fill="black" />
-                  <rect x="85" y="45" width="10" height="10" fill="black" />
-                  <rect x="65" y="50" width="5" height="15" fill="black" />
-                  
-                  <rect x="35" y="55" width="5" height="10" fill="black" />
-                  <rect x="45" y="60" width="20" height="5" fill="black" />
-                  <rect x="55" y="70" width="5" height="15" fill="black" />
-                  <rect x="40" y="80" width="10" height="5" fill="black" />
-                  
-                  <rect x="70" y="70" width="5" height="10" fill="black" />
-                  <rect x="80" y="75" width="15" height="5" fill="black" />
-                  <rect x="75" y="85" width="20" height="10" fill="black" />
-                  <rect x="10" y="60" width="15" height="5" fill="black" />
-                </svg>
-              </div>
-
-              <div className="text-xs text-amber-500 font-mono font-medium truncate mb-2">
-                {appDownloadUrl}
-              </div>
-
-              <a 
-                href={appDownloadUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full py-2 bg-amber-500 text-zinc-950 font-bold rounded-xl text-xs hover:bg-amber-400 transition"
-              >
-                Visitar Link de Download
-              </a>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </header>
   );
 }

@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Play, ExternalLink, Film, Tv, Info, AlertCircle, ShieldCheck, Ghost } from 'lucide-react';
+import { Play, ExternalLink, Film, Tv, Info, AlertCircle, ShieldCheck, Ghost, MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface SeasonLink {
@@ -261,6 +261,46 @@ export default function WatchSeries() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* 📺 Sobre a série The Winchesters Section */}
+      <div className="mt-12 pt-8 border-t border-zinc-900" id="sobre-the-winchesters">
+        <div className="bg-zinc-900/30 border border-zinc-800/60 rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+          {/* Subtle background blur */}
+          <div className="absolute -right-16 -bottom-16 w-48 h-48 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div className="space-y-3 max-w-3xl">
+              <div className="flex items-center gap-2.5 text-amber-500">
+                <Tv className="w-5 h-5 animate-pulse" />
+                <h3 className="text-lg font-bold text-zinc-100 uppercase tracking-wider font-sans">
+                  Série Prequela: The Winchesters (2022)
+                </h3>
+              </div>
+              <p className="text-zinc-300 text-sm leading-relaxed">
+                Antes de Sam e Dean, existiam seus pais: John e Mary. Esta série prequela acompanha a emocionante história de amor e de caça de como eles se conheceram e colocaram tudo em risco para salvar não apenas o seu amor, mas o mundo inteiro.
+              </p>
+              <div className="p-4 bg-zinc-950/40 rounded-xl border border-zinc-900 text-xs text-zinc-400 leading-relaxed space-y-2">
+                <p>
+                  🤝 <strong className="text-zinc-200">Como você pode colaborar:</strong> O fã-clube está organizando o acervo de <em>The Winchesters</em> para disponibilizá-lo por streaming de graça no portal! Se você possuir os links seguros do Google Drive ou Google Photos da série prequela e puder colaborar, entre em contato pelo nosso grupo oficial do WhatsApp.
+                </p>
+              </div>
+            </div>
+
+            <div className="shrink-0 w-full lg:w-auto">
+              <a
+                href="https://chat.whatsapp.com/Jy23MdpHIqR2nZ0ObVuAzZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                referrerPolicy="no-referrer"
+                className="flex items-center justify-center gap-2 px-6 py-3.5 w-full lg:w-auto bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition duration-200 shadow-md active:scale-98 cursor-pointer"
+              >
+                <MessageCircle className="w-4 h-4 fill-current" />
+                <span>Colaborar no WhatsApp</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

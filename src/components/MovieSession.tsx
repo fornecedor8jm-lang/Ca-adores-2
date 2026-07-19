@@ -125,7 +125,7 @@ export default function MovieSession() {
       </div>
 
       {/* Official Status Callout Block */}
-      <div className="mb-8 p-5 bg-gradient-to-r from-amber-950/20 via-zinc-900 to-amber-950/10 border border-amber-900/40 rounded-2xl">
+      <div className="mb-8 p-6 bg-gradient-to-r from-amber-950/20 via-zinc-900 to-amber-950/10 border border-amber-900/40 rounded-2xl space-y-4">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex gap-3">
             <div className="p-2 bg-amber-500/10 text-amber-500 rounded-xl border border-amber-500/20 mt-0.5 sm:mt-0 shrink-0">
@@ -141,11 +141,6 @@ export default function MovieSession() {
                   <span> A votação da rodada atual está encerrada. O domingo é reservado para a divulgação dos resultados oficiais e início da nova programação.</span>
                 )}
               </div>
-              <p className="text-xs text-amber-500 mt-1.5 font-sans flex items-center gap-2 flex-wrap">
-                <span>🇧🇷 Fim da Votação: Sábado às 23:59 BRT</span>
-                <span className="text-zinc-600">•</span>
-                <span>🇵🇹 Referência Portugal: Domingo às 03:59 Lisboa</span>
-              </p>
             </div>
           </div>
           <span className={`px-3 py-1 text-[10px] uppercase font-mono font-bold tracking-wider rounded-lg border shrink-0 ${
@@ -155,6 +150,25 @@ export default function MovieSession() {
           }`}>
             {isVotingActive ? 'Rodada em Andamento' : 'Finalizada'}
           </span>
+        </div>
+
+        {/* Detailed Voting Rules & Schedule */}
+        <div className="pt-4 border-t border-zinc-900 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div className="space-y-1">
+            <span className="font-bold text-amber-500 font-mono text-[10px] uppercase tracking-wider block">📅 Início das Votações</span>
+            <p className="text-zinc-300">Toda quarta-feira às <strong className="text-zinc-100">00h00</strong> (Horário de Brasília).</p>
+            <p className="text-[10px] text-zinc-500">Portugal: Quarta às 04h00 (Lisboa)</p>
+          </div>
+          <div className="space-y-1 border-t md:border-t-0 md:border-l border-zinc-900 pt-3 md:pt-0 md:pl-4">
+            <span className="font-bold text-amber-500 font-mono text-[10px] uppercase tracking-wider block">⌛ Fim das Votações</span>
+            <p className="text-zinc-300 font-medium">Sábado às <strong className="text-zinc-100">23h59</strong> (Horário de Brasília).</p>
+            <p className="text-[10px] text-zinc-500">Portugal: Domingo às 03h59 (Lisboa)</p>
+          </div>
+          <div className="space-y-1 border-t md:border-t-0 md:border-l border-zinc-900 pt-3 md:pt-0 md:pl-4">
+            <span className="font-bold text-amber-500 font-mono text-[10px] uppercase tracking-wider block">🍿 Domingo de Cineclube</span>
+            <p className="text-zinc-300">Dia reservado para a divulgação do vencedor e maratona conjunta com o fã-clube.</p>
+            <p className="text-[10px] text-emerald-500 font-medium">Participe enviando sua sugestão no WhatsApp!</p>
+          </div>
         </div>
       </div>
 

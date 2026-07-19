@@ -24,22 +24,69 @@ interface RecommendedShow {
   seasons: Season[];
   rating: string;
   creator?: string;
+  category: 'terror' | 'action' | 'dorama' | 'classicos' | 'comedy';
 }
 
 const CHRIS_SHOWS: RecommendedShow[] = [
   {
-    id: 'constantine',
-    title: 'Constantine',
-    synopsis: 'Acompanhe as aventuras de John Constantine, um caçador de demônios que trava uma batalha contra as forças das trevas, tanto dentro de si mesmo quanto no mundo exterior.',
-    year: '2014',
-    genre: 'Terror / Sobrenatural / DC Comics',
-    status: 'Série de 2014, cancelada após a 1ª temporada.',
-    adendum: 'O personagem continua vivo no "Arrowverse" com o mesmo ator, Matt Ryan. Ele faz sua primeira aparição na Temporada 3, Episódio 9 ("Beebo the God of War") de Legends of Tomorrow e tornou-se parte do elenco principal regular a partir da Temporada 4 até a Temporada 6.',
-    posterUrl: 'https://files.catbox.moe/6duvfe.jpg',
+    id: 'the-boys',
+    title: 'The Boys',
+    synopsis: 'Um grupo de vigilantes busca derrubar super-heróis corruptos que abusam de seus superpoderes e da fama, gerenciados por uma corporação gananciosa que esconde segredos obscuros.',
+    year: '2019 - Presente',
+    genre: 'Ação / Sátira / Super-Heróis',
+    status: 'Série de sucesso absoluto com todas as temporadas disponíveis.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/VOmwkwAZSUPSpHmb.jpg',
     seasons: [
-      { name: 'Temporada Única', url: 'https://drive.google.com/drive/folders/10WW3MIWFkGkwum0Q-gmvnJH5C8chHkbi?usp=drive_link' }
+      { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/10srwgb-q2GnIHTAm4nzt6hw5G-lJvsTm' },
+      { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/10zC5lwD-GX6aB8CfrHLMRz25JLw4lkZX' },
+      { name: 'Temporada 3', url: 'https://drive.google.com/drive/folders/1-3hru5GZYwWmuOX6Hj1o4j_ZZsx2baYX' },
+      { name: 'Temporada 4', url: 'https://drive.google.com/drive/folders/11Bm6aM5GJERqq_ucV8yeRuk4WTuHtYdy' },
+      { name: 'Temporada 5 (Drive)', url: 'https://drive.google.com/drive/folders/1J8MrqEOPDP3rpgIYkG4fhdYOB-eMwa4A' }
     ],
-    rating: '8.1/10 (IMDb)'
+    rating: '8.7/10 (IMDb)',
+    category: 'action'
+  },
+  {
+    id: 'handmaids-tale',
+    title: "The Handmaid's Tale",
+    synopsis: 'Em um futuro distópico, uma facção religiosa totalitária assume o poder nos EUA, criando a República de Gilead, onde as poucas mulheres férteis restantes são escravizadas como "Aias" para fins de procriação.',
+    year: '2017 - Presente',
+    genre: 'Distopia / Drama / Suspense',
+    status: 'Disponível completo em áudio dublado.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/cuwIAkdwxukbBujH.jpg',
+    seasons: [
+      { name: 'Pastas Dubladas (5 Temps)', url: 'https://drive.google.com/drive/folders/1_scMY_gg0lnH89CznyVFrq_eUmQSmVcO' }
+    ],
+    rating: '8.4/10 (IMDb)',
+    category: 'action'
+  },
+  {
+    id: 'the-sandman',
+    title: 'The Sandman',
+    synopsis: 'Após anos de aprisionamento por um mago mortal, Morpheus, o Rei dos Sonhos, embarca em uma jornada por diferentes mundos para recuperar suas ferramentas e restaurar seu poder sobre o Sonhar.',
+    year: '2022 - Presente',
+    genre: 'Fantasia Sombria / Sobrenatural',
+    status: 'Baseado na aclamada obra em quadrinhos de Neil Gaiman.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/bKJtpnUuiqjXJkZT.jpg',
+    seasons: [
+      { name: 'Temporadas 1 e 2', url: 'https://drive.google.com/drive/folders/1XsiXMTy59xFUMLroCXrQCXocPzZ4sJ3i' }
+    ],
+    rating: '7.7/10 (IMDb)',
+    category: 'terror'
+  },
+  {
+    id: 'vincenzo',
+    title: 'Vincenzo',
+    synopsis: 'Ao visitar sua terra natal, um advogado de máfia coreano-italiano dá a uma corporação gananciosa incomparável um gosto de sua própria medicina, misturando drama com altas doses de comédia sombria.',
+    year: '2021',
+    genre: 'Dorama / Ação / Comédia Sombria',
+    status: 'Dorama de enorme sucesso com episódios dublados.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/yrDfKMlTjtBaDtbM.jpg',
+    seasons: [
+      { name: 'Temporada 1 Dublada', url: 'https://drive.google.com/drive/folders/1Kt5NPNGtTleBA7EAtK47a2FZJLFEIM4U' }
+    ],
+    rating: '8.4/10 (IMDb)',
+    category: 'dorama'
   },
   {
     id: 'se-desejos-matassem',
@@ -47,71 +94,166 @@ const CHRIS_SHOWS: RecommendedShow[] = [
     synopsis: 'Um aplicativo misterioso promete realizar desejos, mas faz uma contagem para a morte. Um grupo de jovens se envolve com esse ritual macabro e precisa quebrar este ciclo fatal para sobreviver.',
     year: '2026',
     genre: 'Dorama / Terror / Suspense',
-    status: 'Temporadas: 1',
-    posterUrl: 'https://files.catbox.moe/vhqws9.jpg',
+    status: 'Novidade misteriosa no catálogo de doramas de suspense.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/GxrjxKjuqjyRMRAK.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/14iC5TeLyLMQQRuqK1uXY45tWaZbbpYsE' }
     ],
-    rating: 'Novo (2026)'
+    rating: 'Novo (2026)',
+    category: 'dorama'
+  },
+  {
+    id: 'constantine',
+    title: 'Constantine',
+    synopsis: 'Acompanhe as aventuras de John Constantine, um caçador de demônios experiente que trava uma batalha constante contra as forças infernais e seus próprios erros do passado.',
+    year: '2014',
+    genre: 'Terror / Sobrenatural / DC Comics',
+    status: 'Série clássica baseada nas HQs de Hellblazer.',
+    adendum: 'O personagem continua vivo no "Arrowverse" com o mesmo ator, Matt Ryan. Ele faz sua primeira aparição na Temporada 3, Episódio 9 ("Beebo the God of War") de Legends of Tomorrow e tornou-se parte do elenco principal regular a partir da Temporada 4 até a Temporada 6.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/AuHyBknUGbxdyNKv.jpg',
+    seasons: [
+      { name: 'Temporada Única', url: 'https://drive.google.com/drive/folders/10WW3MIWFkGkwum0Q-gmvnJH5C8chHkbi?usp=drive_link' }
+    ],
+    rating: '8.1/10 (IMDb)',
+    category: 'terror'
   },
   {
     id: 'millennium',
     title: 'Millennium',
-    synopsis: 'Frank Black é um ex-agente do FBI com a habilidade de ver o que os assassinos veem. Ele se junta ao Grupo Millennium, uma organização misteriosa que investiga crimes ligados à chegada do novo milênio.',
+    synopsis: 'Frank Black é um ex-agente do FBI capaz de visualizar a mente dos assassinos. Ele integra o misterioso Grupo Millennium que investiga crimes no crepúsculo do século XX.',
     year: '1996 - 1999',
     genre: 'Investigação / Terror Psicológico',
     creator: 'Chris Carter',
-    status: 'Série clássica de 3 temporadas, do mesmo criador de Arquivo X.',
-    posterUrl: 'https://files.catbox.moe/xr6ggd.jpg',
+    status: 'Do aclamado criador de Arquivo X.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/awzCTJYfPNBjDaDW.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/1tL3DQlxphFtrq3LUr1VmtIb50-uVA7AF?usp=drive_link' },
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/1GPow5pCxaS30NzduDMBaiqrL4tmtpgI0?usp=drive_link' },
       { name: 'Temporada 3', url: 'https://drive.google.com/drive/folders/1F_dzi3rkXbGhDH83VXjW6dUizpzuG1xR?usp=drive_link' }
     ],
-    rating: '8.0/10 (IMDb)'
+    rating: '8.0/10 (IMDb)',
+    category: 'terror'
   },
   {
     id: 'penny-dreadful',
     title: 'Penny Dreadful',
-    synopsis: 'Personagens icônicos da literatura de terror, como Dr. Frankenstein, Dorian Gray e figuras de Drácula, cruzam caminhos na Londres vitoriana. Uma série sombria que explora as origens desses monstros.',
+    synopsis: 'Personagens icônicos da literatura clássica de horror, como o monstro de Frankenstein, Dorian Gray e vampiros, habitam os becos sombrios da Londres vitoriana.',
     year: '2014 - 2016',
     genre: 'Terror Gótico / Fantasia Sombria',
-    status: 'Série premiada com elenco estrelar, incluindo Eva Green.',
-    posterUrl: 'https://files.catbox.moe/kgr7ny.jpg',
+    status: 'Série gótica premiada e com excelente elenco liderado por Eva Green.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/TJuapfvfFQFEGpZR.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/1hLYxAu5bz3kJjSr9ZUO8QnwLAh0yDqTz?usp=drive_link' },
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/1FIxTxPi-NK5Rh0ms6SQ9ysWmrYF8Rj_e?usp=drive_link' },
       { name: 'Temporada 3', url: 'https://drive.google.com/drive/folders/1brL4CDqZ9RB2QWQjk-vSF-yZnu9N2d7Q?usp=drive_link' }
     ],
-    rating: '8.2/10 (IMDb)'
+    rating: '8.2/10 (IMDb)',
+    category: 'terror'
   },
   {
     id: 'helix',
     title: 'Helix',
-    synopsis: 'Uma equipe de cientistas do CDC (Centro de Controle de Doenças) viaja para uma instalação de pesquisa no Ártico para investigar um possível surto de uma doença mortal, apenas para se verem em uma luta pela sobrevivência que pode afetar toda a humanidade.',
+    synopsis: 'Investigando um surto viral desconhecido em uma instalação isolada de pesquisa no Ártico, virologistas do CDC se deparam com segredos que ameaçam a raça humana.',
     year: '2014 - 2015',
     genre: 'Ficção Científica / Terror / Epidemia',
-    status: 'Suspense claustrofóbico em 2 temporadas.',
-    posterUrl: 'https://static.tvmaze.com/uploads/images/medium_portrait/126/316697.jpg',
+    status: 'Terror e ficção científica claustrofóbicos.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/xYDWrnaagYFKZqUe.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/11II_djSaEChhQ1rmgcuGuYoNqGXsH5wz?usp=drive_link' },
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/11pK7-JE1HUpBRSbsMRKPochaLvDlz3TT?usp=drive_link' }
     ],
-    rating: '6.8/10 (IMDb)'
+    rating: '6.8/10 (IMDb)',
+    category: 'terror'
   },
   {
     id: 'into-the-dark',
     title: 'Into the Dark',
-    synopsis: 'Uma série antológica de terror da Hulu/Blumhouse. Cada episódio é inspirado em um feriado ou data comemorativa do mês em que é lançado, apresentando histórias completas e independentes de horror.',
+    synopsis: 'Cada episódio de longa-metragem desta antologia de terror é temático sobre algum feriado ou data comemorativa do mês do lançamento, trazendo enredos surpreendentes.',
     year: '2018 - 2021',
     genre: 'Antologia / Terror Slasher / Sobrenatural',
-    status: 'Produzido pela Blumhouse Television.',
-    posterUrl: 'https://static.tvmaze.com/uploads/images/medium_portrait/299/749153.jpg',
+    status: 'Produção original da Blumhouse Television.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/lzzPAABFBwabEaKZ.jpg',
     seasons: [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/1pZOqC0tiJxwXyhAtHdUR2RMb3of7m-xT?usp=drive_link' },
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/1Th9LbLl9t2M2oSvF275SS5DuoEEi9BZ3?usp=drive_link' }
     ],
-    rating: '6.9/10 (IMDb)'
+    rating: '6.9/10 (IMDb)',
+    category: 'terror'
+  },
+  {
+    id: 'the-strain',
+    title: 'The Strain',
+    synopsis: 'Um vírus vampírico infecta passageiros de um avião que pousa em Nova York, iniciando uma epidemia antiga que ameaça consumir toda a cidade e transformar a civilização.',
+    year: '2014 - 2017',
+    genre: 'Terror / Suspense / Vampiros',
+    status: 'Criada pelo diretor vencedor do Oscar Guillermo del Toro.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/OkoNWoDlEdIuZDnd.jpg',
+    seasons: [
+      { name: 'Disponibilização em Breve', url: 'https://chat.whatsapp.com/Jy23MdpHIqR2nZ0ObVuAzZ' }
+    ],
+    rating: '7.3/10 (IMDb)',
+    category: 'terror'
+  },
+  {
+    id: 'the-witcher-nightmare-of-the-wolf',
+    title: 'The Witcher: Nightmare of the Wolf',
+    synopsis: 'Anos antes de treinar Geralt, o bruxo Vesemir vive uma jornada de aventuras e ganância. Mas uma nova e monstruosa ameaça exige que ele encare suas piores lembranças.',
+    year: '2021',
+    genre: 'Animação / Fantasia Sombria / Ação',
+    status: 'Filme anime oficial expandindo o universo de The Witcher.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/MhKmqDIqHmauRFtM.jpg',
+    seasons: [
+      { name: 'Filme/Anime Completo', url: 'https://drive.google.com/file/d/13aBHu8EF26OiMPYIgCo7pvfyhF3oAtOb/view' }
+    ],
+    rating: '7.2/10 (IMDb)',
+    category: 'terror'
+  },
+  {
+    id: 'o-tunel-do-tempo',
+    title: 'O Túnel do Tempo',
+    synopsis: 'Dois cientistas ficam perdidos nos labirintos da história após testarem um projeto secreto do governo americano, viajando por épocas importantes da humanidade.',
+    year: '1966 - 1967',
+    genre: 'Ficção Científica Clássica / Aventura',
+    status: 'Série clássica de ficção científica dos anos 60.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/EZvFeaLXOKQLcJGV.jpg',
+    seasons: [
+      { name: 'Episódios 1-10', url: 'https://drive.google.com/drive/folders/18wFuU2JPkGOo1HCe7KX4rC7wPLC5kNX_' }
+    ],
+    rating: '7.1/10 (IMDb)',
+    category: 'classicos'
+  },
+  {
+    id: 'spider-man-toei',
+    title: 'Spider-Man (Toei 1978)',
+    synopsis: 'A antológica série Tokusatsu japonesa onde o motoqueiro Takuya Yamashiro ganha poderes de aranha de um alienígena para defender a Terra, pilotando o icônico robô Leopardon.',
+    year: '1978',
+    genre: 'Tokusatsu / Ação / Clássico Retro',
+    status: 'Série cult lendária com episódios completos divididos em pastas.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/fiwYDknWWnQGQdVx.jpg',
+    seasons: [
+      { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/1-crp67j9QGavyYqwmPBfna9iT5kYzHzj' },
+      { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/18invt56cv6dDq6tuZHm71mXSZd1VDmr0' }
+    ],
+    rating: '7.0/10 (IMDb)',
+    category: 'classicos'
+  },
+  {
+    id: 'tapas-e-beijos',
+    title: 'Tapas & Beijos',
+    synopsis: 'As confusões, romances e trapalhadas de Sueli e Fátima, duas grandes amigas de Copacabana que trabalham em uma loja de vestidos de noiva enquanto buscam sua própria felicidade amorosa.',
+    year: '2011 - 2015',
+    genre: 'Comédia Brasileira / Clássico nacional',
+    status: 'A comédia de maior sucesso das noites brasileiras completa com todas as temporadas.',
+    posterUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663627993849/XCeXltwkSPazItHU.jpg',
+    seasons: [
+      { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/1-Wibm6HLYwryTBqrZRAap_HxUChxvlyW' },
+      { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/1-B3fP2EB-rTCA8kR-16AI5qGI0-c_JqW' },
+      { name: 'Temporada 3', url: 'https://drive.google.com/drive/folders/1-HZZH3yfxDD5GaqMM7XUbIghEqw1Sfxt' },
+      { name: 'Temporada 4', url: 'https://drive.google.com/drive/folders/11FjddUt-vI6kTgnxS1jV45Pjvx-Zw5jy' },
+      { name: 'Temporada 5', url: 'https://drive.google.com/drive/folders/1-H4XG1U4sWgc_UcOA9sOzClGcaNn4tgx' }
+    ],
+    rating: '8.1/10 (IMDb)',
+    category: 'comedy'
   },
   {
     id: '50-states-of-fright',
@@ -126,13 +268,14 @@ const CHRIS_SHOWS: RecommendedShow[] = [
       { name: 'Temporada 1', url: 'https://drive.google.com/drive/folders/1cZ0SybV1TFmaguOnEL8HrhPiM_OkJMh4?usp=drive_link' },
       { name: 'Temporada 2', url: 'https://drive.google.com/drive/folders/11IAPiVkqw_0cvIoqrYzNWGbEFBqRc0Xw?usp=drive_link' }
     ],
-    rating: '6.3/10 (IMDb)'
+    rating: '6.3/10 (IMDb)',
+    category: 'terror'
   }
 ];
 
 export default function ChrisRecommends() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState<'all' | 'terror' | 'dorama' | 'classico' | 'breve'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'terror' | 'action' | 'dorama' | 'classicos' | 'comedy' | 'breve'>('all');
   const [selectedShow, setSelectedShow] = useState<RecommendedShow | null>(null);
 
   const filteredShows = CHRIS_SHOWS.filter(show => {
@@ -143,10 +286,7 @@ export default function ChrisRecommends() {
     if (!matchesSearch) return false;
     
     if (activeCategory === 'all') return true;
-    if (activeCategory === 'dorama') return show.genre.toLowerCase().includes('dorama');
-    if (activeCategory === 'classico') return show.year.includes('1996') || show.year.includes('2014');
-    if (activeCategory === 'terror') return show.genre.toLowerCase().includes('terror');
-    return true;
+    return show.category === activeCategory;
   });
 
   return (
@@ -163,15 +303,15 @@ export default function ChrisRecommends() {
             <span>Séries Recomendadas</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-100 tracking-tight">
-            𝐀𝐫𝐪𝐮𝐢𝐯𝐨𝐬 𝐒𝐞𝐜𝐫𝐞𝐭𝐨𝐬 — Indicações de Terror & Sobrenatural
+            𝐀𝐫𝐪𝐮𝐢𝐯𝐨𝐬 𝐒𝐞𝐜𝐫𝐞𝐭... — Indicações Multigêneros
           </h2>
           <p className="text-zinc-400 text-sm mt-1 max-w-3xl">
-            Procurando séries cabulosas após maratonar Supernatural? O Chris separou pessoalmente as melhores produções de terror, lendas urbanas e doramas misteriosos com links diretos do Google Drive!
+            Procurando produções cabulosas? O Chris separou as melhores séries de terror, doramas de mistério, clássicos retrô e grandes sucessos com links diretos do Google Drive!
           </p>
         </div>
         
         <span className="self-start md:self-center px-3 py-1.5 bg-red-950/40 text-red-400 text-xs uppercase font-mono font-bold tracking-wider rounded-lg border border-red-900/30">
-          Primeira Atualização: Especial Terror
+          Segunda Grande Atualização: Novas Categorias
         </span>
       </div>
 
@@ -186,7 +326,7 @@ export default function ChrisRecommends() {
             <span className="text-xs px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 font-mono">Caçador Experiente</span>
           </p>
           <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed italic">
-            "Faaaaala Caçadores! Se o diário do John ficou pequeno para vocês, eu busquei nas profundezas as séries mais bizarras e sombrias de terror. Para começar esta primeira atualização, foquei 100% no terror que faz a gente checar as fechaduras de sal grosso. Pegue sua caneca, prepare a maratona e abra o link diretamente para salvar no seu Drive!"
+            "Faaaaala Caçadores! Preparem a pipoca, porque esta segunda grande atualização traz muito mais do que terror! Além dos pôsteres oficiais 100% corrigidos com hospedagem de alta qualidade, adicionei sucessos de ação como The Boys, clássicos lendários da ficção científica, doramas espetaculares de mistério e até comédia brasileira. Tudo organizado em pastas diretas!"
           </p>
         </div>
       </div>
@@ -213,7 +353,17 @@ export default function ChrisRecommends() {
                 : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60'
             }`}
           >
-            Terror & Sobrenatural
+            Terror & Fantasia ({CHRIS_SHOWS.filter(s => s.category === 'terror').length})
+          </button>
+          <button
+            onClick={() => setActiveCategory('action')}
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${
+              activeCategory === 'action'
+                ? 'bg-amber-500 text-zinc-950 shadow'
+                : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60'
+            }`}
+          >
+            Ação & Suspense ({CHRIS_SHOWS.filter(s => s.category === 'action').length})
           </button>
           <button
             onClick={() => setActiveCategory('dorama')}
@@ -223,17 +373,27 @@ export default function ChrisRecommends() {
                 : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60'
             }`}
           >
-            Dorama Coreano
+            Doramas ({CHRIS_SHOWS.filter(s => s.category === 'dorama').length})
           </button>
           <button
-            onClick={() => setActiveCategory('classico')}
+            onClick={() => setActiveCategory('classicos')}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${
-              activeCategory === 'classico'
+              activeCategory === 'classicos'
                 ? 'bg-amber-500 text-zinc-950 shadow'
                 : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60'
             }`}
           >
-            Anos Curados
+            Clássicos & Sci-Fi ({CHRIS_SHOWS.filter(s => s.category === 'classicos').length})
+          </button>
+          <button
+            onClick={() => setActiveCategory('comedy')}
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${
+              activeCategory === 'comedy'
+                ? 'bg-amber-500 text-zinc-950 shadow'
+                : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60'
+            }`}
+          >
+            Comédia ({CHRIS_SHOWS.filter(s => s.category === 'comedy').length})
           </button>
           <button
             onClick={() => setActiveCategory('breve')}
